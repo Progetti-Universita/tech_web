@@ -1,0 +1,116 @@
+Introduction to Informatics
+
+
+
+1.1 Basics of Informatics
+
+Informatics is a relatively young scientific discipline and academic field, and its exact definition and terminology vary between different regions, particularly in Europe and the United States. While informatics is often used interchangeably with computer science in America, these terms have distinct histories and meanings. Informatics primarily focuses on the automatic processing of information and the transformation of information through computation and communication.
+
+There are different paradigms within computer science, including science, technology, and mathematics. These paradigms encompass theory, modeling, and design, as well as rationalist, technocratic, and scientific perspectives.
+
+Computer science has three key branches: mathematical, theoretical, and practical. The mathematical branch deals with systems modeling and applications for solving mathematical problems. The theoretical branch encompasses algorithms, languages, compilers, and data structures, relying on numerical and logical analyses. The practical branch involves operating systems, software development, and software engineering, with real-world applications in cryptography, artificial intelligence, and computer graphics.
+
+The meaning of the term informatics has evolved over time. Initially, it was associated with library science and the organization of scientific information. Later, it shifted towards the science of computers and programming, focusing on the theory of programming and computer applications. In the early 1990s, informatics expanded to become a fundamental science that studies information processes in nature, society, and technical systems. This broader interpretation led to various specializations in informatics, such as theoretical computer science, social informatics, bioinformatics, and physical informatics.
+
+Informatics has evolved into eight major areas, including theoretical informatics, cybernetics, programming, artificial intelligence, information systems, computing equipment, social informatics, bioinformatics, and physical informatics. The coexistence of different definitions and specializations makes the study of informatics complex and multifaceted.
+
+
+
+
+
+Historical Background 1.1.1
+
+The history of the term "computer science" dates back to 1959 when Louis Fein advocated for the creation of the first Graduate School of Computer Science. He justified the name by referencing management science, which, like computer science, is applied and interdisciplinary, sharing characteristics of an academic discipline. Despite the name "computer science," most scientific areas related to computers do not focus on the study of computers themselves. As a result, several alternative names have been proposed in English-speaking regions. For example, Peter Naur introduced the Scandinavian term "datalogy" to highlight the handling of data within the discipline, regardless of computer use. In 1957, Karl Steinbuch introduced the German term "informatik," and in 1962, Philippe Dreyfus introduced the French term "informatique." The English term "informatics" was coined by combining "information" and "automation" and originally described the science of automatically processing information. The central concept of informatics was the transformation of information through computation and communication by both living organisms and artifacts, enabling its use in decision-making..
+
+
+The history of informatics in the modern sense begins in the mid-20th century with the advent of computers and the computer revolution. There are differing opinions on when this era began, some dating it from the creation of the first electronic computer, while others trace it back to early electric and mechanical calculators. Many important inventions and discoveries occurred during this "prehistory," laying the foundation for modern information technology.
+
+To understand the roots of informatics, one must examine the history of computer technology, which includes diverse devices and architectures. Ancient examples include the abacus from Babylon and China, as well as the Jacquard loom and Charles Babbage's analytical engine. Ada Lovelace is considered the first programmer. Mechanical devices, like the Marchant calculator, found widespread use in the 1960s.
+
+The first-generation electronic computers (1937-1953) used vacuum tubes, while analog computers were also developed. Notable machines included ABC, Colossus, and ENIAC. Software technology during this period was minimal, with programs written in machine code.
+
+Second-generation computers (1954-1962) used semiconductor elements, allowing real number calculations and the development of high-level programming languages like FORTRAN, ALGOL, and COBOL.
+
+The third generation (1963-1972) saw the use of integrated electronic circuits and semiconductor memory, leading to improved speed and the creation of supercomputers.
+
+The fourth generation (1972-1984) brought large-scale integration on chips, allowing entire processors to fit on a single chip. Key developments included the C programming language, the UNIX operating system, and declarative programming.
+
+The fifth generation (1984-1990) embraced parallel processing, faster semiconductor memories, and computer networks. The use of personal workstations became more common.
+
+The current sixth generation (1990-) is characterized by the exponential growth of wide-area networking, as well as the integration of computers into various aspects of everyday life, including mobile computing devices and netbooks, which heavily rely on the Internet.
+
+This history illustrates the evolution of computer technology, from mechanical devices to modern networked computing.
+
+
+
+
+1.1.2 Famous People in the History of Computing
+
+
+Grace Murray Hopper: Coined the term "debugging" in 1947 and contributed to the development of machine-independent programming, leading to modern programming languages like COBOL.
+
+Ken Thompson and Dennis Ritchie: Invented the UNIX operating system in 1969, which had a profound impact on computer operating systems and inspired the development of personal computers, including Apple's.
+
+Seymour Cray: Set the standard for modern supercomputing, focusing on efficient cooling systems and precise signal synchronization in his computer designs.
+
+Marvin Lee Minsky: Co-founder of the Artificial Intelligence Laboratory at MIT and author of foundational works on artificial neural networks, cognitive psychology, computational linguistics, and more.
+
+Douglas Carl Engelbart: Known for inventing the computer mouse in the 1960s and advancing human-computer interaction, graphical user interfaces, hypertext, and networked computers.
+
+John McCarthy: Coined the term "artificial intelligence" and developed LISP, a high-level programming language, and popularized the use of computing resources among many users.
+
+Tim Paterson: Original author of MS-DOS in 1980, which Bill Gates later rebranded. Paterson also worked on MSX-DOS and Visual Basic projects.
+
+Daniel Singer and Robert M. Frankston: Creators of the first spreadsheet computer program, VisiCalc, which transformed microcomputers into professional tools.
+
+Robert Elliot Kahn and Vinton Gray Cerf: Inventors of the basic Internet communication languages, TCP (Transmission Control Protocol) and IP (Internet Protocol).
+
+Niklaus Wirth: Chief designer of several programming languages, including Pascal, and influential in structured programming and software engineering.
+
+James Gosling: Inventor of the Java programming language in 1995, known for its portability and compatibility across various computer architectures.
+
+Timothy John Berners-Lee: Inventor of the World Wide Web (WWW) and the first successful client-server communication via the Internet using HTTP. He is the director of the W3C, a major standards organization for the WWW.
+
+Linus Benedict Torvalds: Created the Linux kernel, which is the core of the GNU/Linux operating system and one of the most common free operating systems.
+
+These individuals, among many others not mentioned, have left a lasting legacy in the field of computing, shaping the technology and software we use today.
+
+
+
+1.1.3 Areas of Computer Science
+
+
+Computer science is a field that combines both a scientific and practical approach. Computer scientists specialize in designing computational and information systems while also delving into the theory of computation and information. Their backgrounds often include electronics, mathematics, physics, and other related disciplines.
+
+In 2008, the ACM Special Interest Group on Algorithms and Computation Theory outlined several critical themes in theoretical computer science that have the potential to significantly impact the future of computing. These themes include algorithms, data structures, combinatorics, randomness, complexity, coding, logic, cryptography, distributed computing, and networks, among others. While not exhaustive, this vision helps understand the theoretical aspects of computer science.
+
+Computer science can be broadly divided into theoretical and applied areas:
+
+Theoretical Sciences: These areas emphasize the mathematical aspects of computing and the creation of mathematical models related to computation. They are suitable for individuals with a strong interest in mathematics. Some of the theoretical disciplines include:
+
+Algorithms
+Data Structures
+Combinatorics
+Randomness
+Complexity Theory
+Coding Theory
+Logic
+Cryptography
+Distributed Computing
+Networks
+Applied Sciences: These disciplines are directly linked to the practical use of computers and computing systems. They are focused on real-world applications and include areas such as software engineering, artificial intelligence, computer graphics, and more.
+
+Computer science encompasses a wide range of topics, and individuals can choose areas of interest based on their mathematical inclinations or practical application preferences. The field is continually evolving, with ongoing research and development in both theoretical and applied domains.
+
+
+
+1.2 Relationship with Some Fundamental Sciences
+
+
+Informatics, in its relatively short history of development, has become a foundational science and a source of inspiration for other fundamental disciplines. Simultaneously, it has received inspiration and contributed to advancements in other fields. Informatics has even merged with the names of specific disciplines, such as bioinformatics, health informatics, or medical informatics, signifying its specialization in managing data and processing information within those domains. The fusion of informatics theories and methods with traditional disciplines enriches both informatics and the partner disciplines, creating a mutually beneficial relationship. This interplay demonstrates how informatics interacts with and enhances various scientific domains.
+
+
+
+
+
+
