@@ -56,7 +56,7 @@ pip install flask-login
 ```
 python main.py
 ```
-5. hold down the ctrl key and click on: Running on http://127.0.0.1:5000
+5. Hold down the ctrl key and click on: Running on http://127.0.0.1:5000
 ```
 http://127.0.0.1:5000
 ```
