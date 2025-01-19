@@ -17,6 +17,7 @@ The content of this project was created to pass the web technologies exam at the
 - flask-login
 
 ## How  to use on windows 
+
 1. Clone the repository to git bash
 ```
 git clone https://github.com/Progetti-Universita/tech_web.git
@@ -56,9 +57,10 @@ pip install flask-login
 ```
 python main.py
 ```
-5. Hold down the ctrl key and click on: Running on http://127.0.0.1:5000
+5. Hold down the `Ctrl` key and click on: Running on http://127.0.0.1:5000
 ```
 http://127.0.0.1:5000
 ```
+
 
 
