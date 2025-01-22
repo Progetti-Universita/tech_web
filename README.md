@@ -17,15 +17,15 @@ The content of this project was created to pass the web technologies exam at the
 
 ## How  to use on windows 
 
-- 1. Clone the repository to git bash
+1. Clone the repository to git bash
 ```
 git clone https://github.com/Progetti-Universita/tech_web.git
 ```
-- 2. Run on cmd, type the command `cd` followed by the full folder path, for example:
+2. Run on cmd, type the command `cd` followed by the full folder path, for example:
 ```cmd
 cd "C:\Users\Desktop\Project"
 ``` 
-- 3. Run on cmd, to install all the necessary packages from the requirements.txt file
+3. Run on cmd, to install all the necessary packages from the requirements.txt file
 ```
 pip install -r requirements.txt
 ```
@@ -52,11 +52,7 @@ pip install flask-bcrypt
 pip install flask-login
 ```
 
-- 4. Run on cmd
+4. Run on cmd
 ```
 python app.py
 ```
-
-
-
-
