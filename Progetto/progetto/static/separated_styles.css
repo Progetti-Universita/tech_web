@@ -1,0 +1,146 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 115, 230, 0.2);
+}
+
+button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.area-clienti {
+    float: right;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.area-clienti a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: 500;
+}
+
+.area-clienti a button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.area-clienti a button:hover {
+    background-color: #005bb5;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.area-registrazione {
+    float: right;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.area-registrazione a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: 500;
+}
+
+.area-registrazione a button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.area-registrazione a button:hover {
+    background-color: #005bb5;
+}
+

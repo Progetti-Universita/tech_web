@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssicuraMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='separated_styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <h1>AssicuraMe</h1>
+</header>
+<div class="container">
+    <div class="area-clienti">
+        <a href="{{ url_for('area_clienti') }}">
+            <button>Area Clienti</button>
+        </a>
+    </div>
+    <div class="area-registrazione">
+        <a href="{{ url_for('registrazione') }}">
+            <button>Registrazione</button>
+        </a>
+    </div>
+    
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+          {% endif %}
+        {% endwith %}
+        </div>
+      </div>
+    </main>
+    <div class="container">
+      <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Fai un Preventivo</legend>
+              <div class="form-group">
+                  {{ form.eta.label(class="form-control-label") }}
+
+                  {% if form.eta.errors %}
+                      {{ form.eta(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.eta.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.eta(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
+              <div class="form-group">
+                {{ form.cilindrata.label(class="form-control-label") }}
+
+                {% if form.cilindrata.errors %}
+                    {{ form.cilindrata(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.cilindrata.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.cilindrata(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+              <div class="form-group">
+                  {{ form.sinistri.label(class="form-control-label") }}
+
+                  {% if form.sinistri.errors %}
+                      {{ form.sinistri(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.sinistri.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.sinistri(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
+              <div class="form-group">
+                  {{ form.chilometri.label(class="form-control-label") }}
+
+                  {% if form.chilometri.errors %}
+                      {{ form.chilometri(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.chilometri.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.chilometri(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
+              <div class="form-group">
+                  {{ form.classe_merito.label(class="form-control-label") }}
+                  {% if form.classe_merito.errors %}
+                      {{ form.classe_merito(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.classe_merito.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.classe_merito(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
+          </fieldset>
+          <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+      </form>
+      {% if calcolo != 0 %}
+        <div>Il tuo preventivo è: {{ calcolo }} €</div>
+        <div class="border-top pt-3">
+            <div class="text-muted">
+                Visualizza i tuoi risultati<a class="ml-2" href="{{ url_for('insurance_results') }}"></a>
+            </div>
+        </div>
+    {% endif %}
+  </div>
+</body>
+</html>

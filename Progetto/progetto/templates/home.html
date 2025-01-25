@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssicuraMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='separated_styles.css') }}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1><span style="color: #0073e6;">AssicuraMe</span></h1>
+    </div>
+</header>
+<div class="container">
+    <div class="area-registrazione">
+        <a href="{{ url_for('registrazione') }}">
+            <button>Registrazione</button>
+        </a>
+        <a href="{{ url_for('area_clienti') }}">
+            <button>Area Clienti</button>
+        </a>
+    </div>
+    <br><br><br>
+    <div>
+        <h3 style="font-weight: bold;">Benvenuto su AssicuraMe</h3>
+        <p>Effettua il tuo preventivo per auto in pochi semplici passi!</p>
+        <p>Registrati e accedi alla tua area clienti</p>
+        <p>per effettuare il tuo calcolo preventivo</p>
+
+    </div>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo AssicuraMe">
+    </div>
+    <footer>
+        <p>2025 Assicurazione Auto - Tutti i diritti riservati.</p>
+    </footer>
+</div>
+</body>
+</html>

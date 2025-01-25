@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssicuraMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='separated_styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>AssicuraMe</h1>
+    </header>
+    <div class="container">
+        <div class="area-registrazione">
+            <a href="{{ url_for('logout') }}">
+                <button>Esci</button>
+            </a>
+            <a href="{{ url_for('area_clienti') }}">
+                <button>Area Clienti</button>
+            </a>
+        </div>
+        {% if form %}
+        <div class="media-body">
+            <h2 class="account-heading">Benvenuto {{ current_user.nome }}</h2>
+            <p class="text-secondary">{{ current_user.email }}</p>
+          </div>
+          <main role="main" class="container">
+            <div class="row">
+              <div class="col-md-8">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                      <div class="alert alert-{{ category }}">
+                        {{ message }}
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+              </div>
+            </main>
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Account Info</legend>
+                <div class="form-group">
+                    {{ form.nome.label(class="form-control-label") }}
+                    {% if form.nome.errors %}
+                        {{ form.nome(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.nome.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.nome(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.cognome.label(class="form-control-label") }}
+                    {% if form.cognome.errors %}
+                        {{ form.cognome(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.cognome.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.cognome(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        <div class="container">
+            Fai un preventivo <a class="link" href="{{ url_for('calcolo') }}">Entra</a>
+        </div>
+        <div class="container">
+            Visualizza i preventivi già effettuati <a class="link" href="{{ url_for('insurance_results') }}">Entra</a>
+        </div>
+    </div>
+    {% endif %}
+    {% if insurance and user %}
+    <form method="POST" action="">
+    <div class="card shadow mb-4">
+        <div class="container">
+            <h2 class="text-center mb-0">Dati utente</h2>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Nome:</strong> {{ user.nome }}</li>
+                <li class="list-group-item"><strong>Cognome:</strong> {{ user.cognome }}</li>
+                <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="text-center mb-0">Risultati del tuo calcolo assicurativo</h2>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Età:</strong> {{ insurance.eta }}</li>
+            <li class="list-group-item"><strong>Cilindrata:</strong> {{ insurance.cilindrata }}</li>
+            <li class="list-group-item"><strong>Sinistri:</strong> {{ insurance.sinistri }}</li>
+            <li class="list-group-item"><strong>Chilometri:</strong> {{ insurance.chilometri }}</li>
+            <li class="list-group-item"><strong>Classe di Merito:</strong> {{ insurance.classe_merito }}</li>
+            <li class="list-group-item"><strong>Totale:</strong> {{ insurance.calcolo }}</li>
+        </ul>
+    </div>
+    </form>
+{% endif %}
+</body>
+</html>
